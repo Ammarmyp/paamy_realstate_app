@@ -4,7 +4,17 @@ module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "lexend-bold": ["Lexend-Bold", "sans-serif"],
+        "lexend-extrabold": ["Lexend-ExtraBold", "sans-serif"],
+        "lexend-medium": ["Lexend-Medium", "sans-serif"],
+        "lexend-regular": ["Lexend-Regular", "sans-serif"],
+        "lexend-semi-bold": ["Lexend-SemiBold", "sans-serif"],
+        "lexend-light": ["Lexend-Light", "sans-serif"],
+      },
+      colors: {},
+    },
   },
   plugins: [],
 };

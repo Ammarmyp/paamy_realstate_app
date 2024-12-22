@@ -3,13 +3,9 @@ import { Text, useColorScheme, View, StyleSheet } from "react-native";
 export default function Index() {
   const colorScheme = useColorScheme();
 
-  const themeTextStyle =
-    colorScheme === "light" ? styles.lightThemeText : styles.darkThemeText;
-  const themeContainerStyle =
-    colorScheme === "light" ? styles.lightContainer : styles.darkContainer;
   return (
-    <View style={[styles.container, themeContainerStyle]}>
-      <Text className="font-extrabold" style={[styles.text, themeTextStyle]}>
+    <View style={[styles.container]}>
+      <Text className="text-3xl font-lexend-bold" style={[styles.text]}>
         Edit app/index.tsx to edit this screen.
       </Text>
     </View>
@@ -22,9 +18,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  text: {
-    fontSize: 20,
-  },
+  text: {},
   lightContainer: {
     backgroundColor: "#d0d0c0",
   },
