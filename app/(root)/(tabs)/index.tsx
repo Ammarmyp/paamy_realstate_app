@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { Text, useColorScheme, View, StyleSheet } from "react-native";
 
 export default function Index() {
@@ -5,9 +6,10 @@ export default function Index() {
 
   return (
     <View style={[styles.container]}>
-      <Text className="text-3xl font-lexend-bold" style={[styles.text]}>
-        Edit app/index.tsx to edit this screen.
-      </Text>
+      <Link href={"/sign-in"}>Sign In</Link>
+      <Link href={"/explore"}>Expore</Link>
+      <Link href={"/profile"}>Profile</Link>
+      <Link href={"/properties/2"}>Property detail</Link>
     </View>
   );
 }
