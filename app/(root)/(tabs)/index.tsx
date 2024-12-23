@@ -5,11 +5,34 @@ export default function Index() {
   const colorScheme = useColorScheme();
 
   return (
-    <View style={[styles.container]}>
-      <Link href={"/sign-in"}>Sign In</Link>
-      <Link href={"/explore"}>Expore</Link>
-      <Link href={"/profile"}>Profile</Link>
-      <Link href={"/properties/2"}>Property detail</Link>
+    <View
+      style={[styles.container]}
+      className="font-lexend-bold text-primary-100"
+    >
+      <Link
+        href={"/sign-in"}
+        className="font-lexend-bold text-primary-300 text-3xl "
+      >
+        Sign In
+      </Link>
+      <Link
+        href={"/explore"}
+        className="font-lexend-bold text-primary-300 text-3xl "
+      >
+        Expore
+      </Link>
+      <Link
+        href={"/profile"}
+        className="font-lexend-bold text-primary-300 text-3xl "
+      >
+        Profile
+      </Link>
+      <Link
+        href={"/properties/2"}
+        className="font-lexend-bold text-primary-300 text-3xl "
+      >
+        Property detail
+      </Link>
     </View>
   );
 }

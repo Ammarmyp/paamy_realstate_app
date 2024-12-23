@@ -13,7 +13,23 @@ module.exports = {
         "lexend-semi-bold": ["Lexend-SemiBold", "sans-serif"],
         "lexend-light": ["Lexend-Light", "sans-serif"],
       },
-      colors: {},
+      colors: {
+        primary: {
+          100: "#FF80000A",
+          200: "#FF80001A",
+          300: "#FF8000",
+        },
+        accent: {
+          100: "FBFBFD",
+        },
+        black: {
+          DEFAULT: "#000000",
+          100: "#8C8E98",
+          200: "#666876",
+          300: "#191D31",
+        },
+        danger: "#F75555,",
+      },
     },
   },
   plugins: [],
