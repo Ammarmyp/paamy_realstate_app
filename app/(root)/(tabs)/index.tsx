@@ -28,7 +28,7 @@ export default function Index() {
         Profile
       </Link>
       <Link
-        href={"/properties/2"}
+        href={"/properties/27"}
         className="font-lexend-bold text-primary-300 text-3xl "
       >
         Property detail
