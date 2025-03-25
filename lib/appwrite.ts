@@ -47,3 +47,13 @@ export async function login() {
     console.error(error);
   }
 }
+
+export async function logOut() {
+  try {
+    await account.deleteSession("current");
+    return true;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+}
