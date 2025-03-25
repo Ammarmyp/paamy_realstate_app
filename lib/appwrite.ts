@@ -57,3 +57,21 @@ export async function logOut() {
     return false;
   }
 }
+
+export async function getUserData() {
+  try {
+    const userData = await account.get();
+    if (userData.$id) {
+      const userAvatar = avatar.getInitials(userData.name);
+      return {
+        ...userData,
+        avatar: userAvatar.toString(),
+      };
+    }
+
+    return null;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
