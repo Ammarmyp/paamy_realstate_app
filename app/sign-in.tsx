@@ -1,12 +1,32 @@
 import icons from "@/constants/icons";
 import images from "@/constants/images";
+import { login } from "@/lib/appwrite";
+import { useGlobalContext } from "@/lib/gloabl-provider";
+import { Redirect } from "expo-router";
 import React from "react";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import {
+  Alert,
+  Image,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const signIn = () => {
-  const handleLogin = () => {
+  const { refetch, loading, isLoggedIn } = useGlobalContext();
+
+  if (!loading && isLoggedIn) return <Redirect href="/" />;
+  const handleLogin = async () => {
     // Implement Google Login
+    const result = await login();
+    if (result) {
+      console.log("login is successfull");
+      refetch({});
+    } else {
+      Alert.alert("Error", "Failed to login ");
+    }
   };
   return (
     <SafeAreaView className="bg-white h-full">

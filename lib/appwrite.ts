@@ -58,7 +58,7 @@ export async function logOut() {
   }
 }
 
-export async function getUserData() {
+export async function getCurrentUser() {
   try {
     const userData = await account.get();
     if (userData.$id) {
