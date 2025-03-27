@@ -9,30 +9,9 @@ export default function Index() {
       style={[styles.container]}
       className="font-lexend-bold text-primary-100"
     >
-      <Link
-        href={"/sign-in"}
-        className="font-lexend-bold text-primary-300 text-3xl "
-      >
-        Sign In
-      </Link>
-      <Link
-        href={"/explore"}
-        className="font-lexend-bold text-primary-300 text-3xl "
-      >
-        Expore
-      </Link>
-      <Link
-        href={"/profile"}
-        className="font-lexend-bold text-primary-300 text-3xl "
-      >
-        Profile
-      </Link>
-      <Link
-        href={"/properties/27"}
-        className="font-lexend-bold text-primary-300 text-3xl "
-      >
-        Property detail
-      </Link>
+      <Text className="text-primary-300 text-2xl font-lexend-bold">
+        WELCOME TO PAAMY REAL ESTATE
+      </Text>
     </View>
   );
 }
