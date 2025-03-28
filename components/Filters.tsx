@@ -6,7 +6,7 @@ import { categories } from "@/constants/data";
 const Filters = () => {
   const params = useLocalSearchParams<{ filters?: string }>();
   const [selectedCategory, setSelectedCategory] = useState(
-    params.filters || "ALL"
+    params.filters || "All"
   );
 
   const handleCategoryPress = (category: string) => {
@@ -16,7 +16,7 @@ const Filters = () => {
       return;
     }
     setSelectedCategory(category);
-    router.setParams({ filter: category });
+    router.setParams({ filters: category });
   };
   return (
     <ScrollView
