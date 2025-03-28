@@ -22,7 +22,6 @@ const signIn = () => {
     // Implement Google Login
     const result = await login();
     if (result) {
-      console.log("login is successfull");
       refetch({});
     } else {
       Alert.alert("Error", "Failed to login ");
