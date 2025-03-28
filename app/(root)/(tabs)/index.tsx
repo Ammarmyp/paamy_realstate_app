@@ -19,7 +19,7 @@ export default function Index() {
   const { user } = useGlobalContext();
   return (
     <SafeAreaView className="bg-white h-full">
-      <Button title="seed" onPress={seed} />
+      {/* <Button title="seed" onPress={seed} /> */}
       <FlatList
         numColumns={2}
         data={[1, 2, 3, 4]}
