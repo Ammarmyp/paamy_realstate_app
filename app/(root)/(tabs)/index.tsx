@@ -4,7 +4,9 @@ import Filters from "@/components/Filters";
 import Search from "@/components/Search";
 import icons from "@/constants/icons";
 import { useGlobalContext } from "@/lib/gloabl-provider";
+import seed from "@/lib/seed";
 import {
+  Button,
   FlatList,
   Image,
   SafeAreaView,
@@ -17,6 +19,7 @@ export default function Index() {
   const { user } = useGlobalContext();
   return (
     <SafeAreaView className="bg-white h-full">
+      <Button title="seed" onPress={seed} />
       <FlatList
         numColumns={2}
         data={[1, 2, 3, 4]}
@@ -58,7 +61,7 @@ export default function Index() {
                 </TouchableOpacity>
               </View>
               <FlatList
-                data={[1, 2, 3]}
+                data={[5, 6, 7]}
                 keyExtractor={(item) => item.toString()}
                 renderItem={({ item }) => <FeaturedCards />}
                 horizontal
