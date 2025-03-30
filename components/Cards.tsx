@@ -2,12 +2,17 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import images from "@/constants/images";
 import icons from "@/constants/icons";
+import { Models } from "react-native-appwrite";
 
 interface CardsProps {
+  item: Models.Document;
   onPress?: () => void;
 }
 
-const Cards = ({ onPress }: CardsProps) => {
+const Cards = ({
+  item: { image, rating, address, name, price },
+  onPress,
+}: CardsProps) => {
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -16,26 +21,26 @@ const Cards = ({ onPress }: CardsProps) => {
       <View className="flex flex-row items-center absolute top-5 right-5   bg-white/90 px-2 p-1 rounded-full z-50 ">
         <Image source={icons.star} className="size-2.5" />
         <Text className="font-lexend-bold text-primary-300 text-sm ml-0.5">
-          4.8
+          {rating}
         </Text>
       </View>
-      <Image source={images.japan} className="w-full h-40 rounded-lg" />
+      <Image source={{ uri: image }} className="w-full h-40 rounded-lg" />
       <View className="flex flex-col mt-2">
         <Text
           numberOfLines={1}
           className="text-base font-lexend-bold text-black-300"
         >
-          New York
+          {name}
         </Text>
         <Text
           className="text-xs font-lexend-regular text-black-100"
           numberOfLines={1}
         >
-          Address
+          {address}
         </Text>
         <View className="flex flex-row justify-between items-center mt-2">
           <Text className="text-base font-lexend-bold text-primary-300">
-            $123
+            ${price}
           </Text>
           <TouchableOpacity>
             <Image source={icons.heart} className="w-5 h-5 mr-2" />
