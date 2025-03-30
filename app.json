@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.paamy.paamy_real_state"
     },
     "web": {
       "bundler": "metro",
@@ -31,7 +32,6 @@
           "resizeMode": "cover",
           "backgroundColor": "#ffffff",
           "enableFullScreenImage_legacy": true
-          
         }
       ],
       [
@@ -50,6 +50,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "aae04aa6-04c5-4275-8e8f-c2d03ec02f06"
+      }
     }
   }
 }
