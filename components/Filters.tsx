@@ -4,9 +4,9 @@ import { router, useLocalSearchParams } from "expo-router";
 import { categories } from "@/constants/data";
 
 const Filters = () => {
-  const params = useLocalSearchParams<{ filters?: string }>();
+  const params = useLocalSearchParams<{ filter?: string }>();
   const [selectedCategory, setSelectedCategory] = useState(
-    params.filters || "All"
+    params.filter || "All"
   );
 
   const handleCategoryPress = (category: string) => {
@@ -16,7 +16,7 @@ const Filters = () => {
       return;
     }
     setSelectedCategory(category);
-    router.setParams({ filters: category });
+    router.setParams({ filter: category });
   };
   return (
     <ScrollView
