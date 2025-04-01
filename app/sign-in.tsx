@@ -2,7 +2,7 @@ import icons from "@/constants/icons";
 import images from "@/constants/images";
 import { login } from "@/lib/appwrite";
 import { useGlobalContext } from "@/lib/gloabl-provider";
-import { Redirect } from "expo-router";
+import { Redirect, router } from "expo-router";
 import React from "react";
 import {
   Alert,
@@ -22,7 +22,8 @@ const signIn = () => {
     // Implement Google Login
     const result = await login();
     if (result) {
-      refetch({});
+      // refetch({});
+      router.push("/");
     } else {
       Alert.alert("Error", "Failed to login ");
     }
