@@ -20,13 +20,13 @@ const signIn = () => {
   if (!loading && isLoggedIn) return <Redirect href="/" />;
   const handleLogin = async () => {
     // Implement Google Login
-    const result = await login();
-    if (result) {
-      // refetch({});
-      router.push("/");
-    } else {
-      Alert.alert("Error", "Failed to login ");
-    }
+    // const result = await login();
+    router.push("/");
+    // if (result) {
+    //   // refetch({});
+    // } else {
+    //   Alert.alert("Error", "Failed to login ");
+    // }
   };
   return (
     <SafeAreaView className="bg-white h-full">
